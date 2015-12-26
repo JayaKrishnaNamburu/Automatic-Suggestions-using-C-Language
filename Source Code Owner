@@ -1,0 +1,20 @@
+
+//Program for viewing the entries that are entered using the main program
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ clrscr();
+ char s;
+ FILE *fp;
+ fp=fopen("sales.c","r");
+ while(1)
+ {
+  s=getc(fp);
+  if(s==EOF)
+  break;
+  printf("%c",s);
+ }
+ fclose(fp);
+ getch();
+ }
